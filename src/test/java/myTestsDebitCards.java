@@ -25,7 +25,7 @@ public class myTestsDebitCards {
         card2.withdraw(25);
         card2.checkBalance();
 
-        BbvaDebitCard card3 = new BbvaDebitCard("Javier", "Solis", 123456.98);
+        BbvaDebitCard card3 = new BbvaDebitCard("Javier", "Solis", 123456.99);
 
         Log.print("Card 1 is: " +card1.cardNumber);
         Log.print("Card 2 is: " +card2.cardNumber);
