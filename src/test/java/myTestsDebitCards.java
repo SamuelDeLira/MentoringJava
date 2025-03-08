@@ -1,9 +1,17 @@
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import unosquare.mentoring.bankingClasses.*;
 import unosquare.mentoring.logger.Log;
 
 public class myTestsDebitCards {
+
+    @BeforeTest //Annotation used
+    public void beforeTest() {
+        Log.print("Welcome to BBVA ATM");;
+    }
+
     @Test
     public void usingDebitCards(){
         //DebitCard card1 = new DebitCard(); // It is not possible to create an instance/object of class "Debitcard", because it is abstract (abstract must be inherited)
@@ -36,6 +44,11 @@ public class myTestsDebitCards {
 
     public void AfterClass(){
         Log.print("The number of cards is: " + BbvaDebitCard.howMayCreated);
+    }
+
+    @AfterTest // Annotation to thank the user visit
+    public void afterTest() {
+        Log.print("Thank you for using the BBVA ATM");;
     }
 
 }
