@@ -53,7 +53,7 @@ public class myTestFacebook {
             Thread.sleep(3000);
 
            // Print the title of the first result
-            var firstResult = driver.findElement(By.cssSelector("h3"));
+           var firstResult = driver.findElement(By.cssSelector("h3"));
             Log.print("First Search Result: " + firstResult.getText());
         } catch (Exception ex) {
             Log.print("Error: " + ex.getMessage());
